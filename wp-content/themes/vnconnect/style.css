@@ -1,0 +1,80 @@
+/*
+Theme Name: vnconnect
+Theme URI: http: //vnconnect.info
+Description: Day la child theme cua Startbox
+Author: Thach Pham
+Author URI: http: //vnconnect.info
+Template: twentyseventeen
+Version: 0.1
+*/
+
+@import url("../twentyseventeen/style.css");
+
+/*header start*/
+	.site-branding{
+		padding: 15px 0;
+	}
+	.custom-header .wrap{text-align: center;}
+	.custom-logo-link img{
+		max-width: 200px;
+	}
+	.navigation-top{
+		border-top: 0;
+	}
+	.main-navigation > div > ul{text-align: center;}
+	.main-navigation a{text-transform: uppercase;}
+	.shopping-cart{
+		width: 50px;
+	    height: 65px;
+	    position: absolute;
+	    top: 0px;
+	    right: 0px;
+	    line-height: 65px;
+	    text-align: center;
+	    z-index: 10;
+	}
+	.shopping-cart span i{
+		color: #000;
+		font-size: 22px;
+	}
+	.shopping-cart:hover{
+		cursor: pointer;
+	}
+/*header end*/
+
+/*content start*/
+	.site-content{min-height: 500px;}
+	a{
+		color: #000 !important;
+		text-decoration: none !important;
+	}
+	.product-img{
+		margin-bottom: 20px;
+		position: relative;
+	}
+	.product-box:hover .product-img:before{
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 4px;
+		background: #000;
+		cursor: pointer;
+	}
+	.product-box button{
+		font-size: 12px;
+		padding: 10px 25px;
+	}
+
+	footer{margin-top: 50px;}
+	.footer-wrap{
+		padding-top: 30px;
+		background: #f6f6f6;
+	}
+	.widget_content ul{
+		list-style: none;
+	}
+	.footer-bottom{background: #000; color: #fff; height: 50px; line-height: 50px;}
+
+/*content end*/
