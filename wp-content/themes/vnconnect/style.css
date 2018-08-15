@@ -23,27 +23,28 @@ Version: 0.1
 	}
 	.main-navigation > div > ul{text-align: center;}
 	.main-navigation a{text-transform: uppercase;}
-	.shopping-cart{
-		width: 50px;
-	    height: 65px;
-	    position: absolute;
+	.header-control{
+		position: absolute;
 	    top: 0px;
 	    right: 0px;
-	    line-height: 65px;
-	    text-align: center;
 	    z-index: 10;
 	}
-	.shopping-cart span i{
-		color: #000;
-		font-size: 22px;
+	.header-control span{
+		padding: 15px 10px;
+		display: inline-block;
 	}
-	.shopping-cart:hover{
+	.header-control span:hover{
 		cursor: pointer;
+	}
+	.header-control span:hover i{
+		font-weight: 600;
 	}
 /*header end*/
 
 /*content start*/
-	.site-content{min-height: 500px;}
+	.home-product-wrap{
+		padding-bottom: 50px;
+	}
 	a{
 		color: #000 !important;
 		text-decoration: none !important;
@@ -67,7 +68,143 @@ Version: 0.1
 		padding: 10px 25px;
 	}
 
-	footer{margin-top: 50px;}
+	.site-content{
+		padding: 30px 0;
+	}
+	.page-title{
+		margin: 25px 0;
+    	text-transform: uppercase;
+    	font-size: 22px;
+    	font-weight: 600;
+	}
+	
+
+
+/*content end*/
+
+
+/*sidebar start*/
+	.sidepanel{
+		position: fixed;
+	    top: 0;
+	    right: 0; 
+	    bottom: 0;
+	    overflow-y: auto;
+	    transform: translateX(100%);
+	    background: #fff;
+	    max-width: 30rem;
+	    width: calc(100% - 2.5rem);
+	    padding: 25px 50px;
+	    transition: transform .3s ease-in;
+	    outline: none;
+	}
+	#side-bar-wrap.is-visible{
+		transition-delay: 0s;
+		background-color: rgba(29,29,29,.8);
+
+		position: fixed;
+		height: 100%;
+	    left: 0;
+	    top: 0;
+	    transition: background-color .3s .2s;
+	    width: 100%;
+	    z-index: 100;
+	}
+	.is-visible .sidepanel {
+	    transform: none;
+	    transition-duration: .55s;
+	    transition-timing-function: ease-out;
+	    transition-delay: .2s;
+	}
+	.btn-close{
+		width: 40px;
+	    height: 40px;
+	    text-align: center;
+	    position: absolute;
+	    top: 10px;
+	    right: 0;
+	    line-height: 40px;
+	    cursor: pointer;
+	    font-size: 20px;
+	}
+	.sidepanel-head h3{
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.sp-product{
+		float: left;
+		padding: 7px 0;
+	}
+	.sp-product-left{
+		width: 20%;
+		float: left;
+	}
+	.sp-product-left img{
+		width: 100%;
+	}
+	.sp-product-content{
+		width: 80%;
+		float: left;
+		padding-top: 10px;
+	}
+	.sp-product-content h6, .sp-product-content p{
+		margin-bottom: 0;
+	}
+	.sp-product-content .product-price{
+		font-weight: bold;
+	}
+	.sidepanel-price{
+		float: left;
+    	width: 100%;
+    	margin: 20px 0;
+	}
+	.sidepanel-price-box{
+		background: #efefef;
+		padding: 20px;
+		font-size: 18px;
+	    text-transform: uppercase;
+	    font-weight: 600;
+	    display: inline-block;
+	    width: 100%;
+	}
+	.sidepanel-price-box span{
+		display: inline-block;
+	}
+	.sidepanel-total{
+		float: right;
+	}
+
+	.btn-btnBlack{
+		margin: 5px 0;
+		text-transform: uppercase;
+		font-size: 14px;
+    	font-weight: 600;
+    	background: #222;
+    	color: #fff !important;
+    	padding: 1em 2em;
+    	webkit-transition: background 0.2s;
+    	transition: background 0.2s;
+    	display: inline-block;
+    	text-align: center;
+	}
+	.btn-btnBlack:hover{
+		background: #767676;
+	}
+	.sidepanel-btn .btn-continue, .sidepanel-btn .btn-checkout{
+		width: 100%;
+	}
+	.btn-continue{
+		background: #fff;
+		border: 1px solid #000;
+		color: #000 !important;
+	}
+	.btn-continue:hover{
+		background: #ddd;
+	}
+/*sidebar end*/
+
+
+/*footer start*/
 	.footer-wrap{
 		padding-top: 30px;
 		background: #f6f6f6;
@@ -76,5 +213,32 @@ Version: 0.1
 		list-style: none;
 	}
 	.footer-bottom{background: #000; color: #fff; height: 50px; line-height: 50px;}
+/*footer end*/
 
-/*content end*/
+
+@media (min-width: 1024px){
+	.site-content{min-height: 200px;}
+}
+
+@media (max-width: 767px){
+	.menu-toggle{
+		font-size: 20px;
+	    padding: 7px;
+	    font-weight: 300 !important;
+	    color: #55585b;
+	    margin: 0;
+	}
+	.menu-toggle:focus{
+		outline: none;
+	}
+	.header-control{
+		top: 55px;
+	}
+	.sp-product-left{
+		width: 25%;
+	}
+	.sp-product-content{
+		width: 75%;
+		font-size: 14px;
+	}
+}

@@ -1,0 +1,38 @@
+#cart-wrap{
+	width: 100%;
+	padding-right: 30px;
+}
+#cart-product .sp-product{
+	border-bottom: 1px solid #efefef;
+}
+#cart-product .sp-product:last-child{
+	border-bottom: 0;
+}
+.sp-product-content{
+	position: relative;
+}
+.product-remove{
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 5px 10px;
+}
+.product-remove i:before{
+	font-size: 24px;
+}
+.cartpage-sub-price{
+	width: 100%;
+    background: #f6f6f6;
+    display: inline-block;
+    padding: 25px;
+}
+.cartpage-price-box{
+	margin: 15px 0;
+}
+.cartpage-price-box span{
+	display: inline-block;
+}
+.cartpage-price-box span:last-child {
+    float: right;
+}
