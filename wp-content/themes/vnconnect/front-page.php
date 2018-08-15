@@ -49,6 +49,7 @@ get_header(); ?>
 						</div>
 					</div>
 				<?php endwhile; ?>
+				<?php //echo do_shortcode('[ajax_pagination post_type="product" posts_per_page="2" paged="1"]'); ?>
 			<?php endif; ?>
 		</div>
 	</div>
